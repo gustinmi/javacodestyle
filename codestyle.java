@@ -1,3 +1,15 @@
+
+// Conditional compilations
+
+/**
+* Java supports conditional compilation via workaround (static final variables and compiler optimization)
+* Therefore, for the conditional if statements should be on same line despite 
+* If the variable will be false in compilation time, the whole statement will not be in bytecode.
+*/
+
+if (VERBOSE_TRACE_ENABLED_FLAG) log.info("Verbose log message"); // This is not normal if without braces (usually disencouraged)
+
+
 // Purpose of indentation 
 
 /**
