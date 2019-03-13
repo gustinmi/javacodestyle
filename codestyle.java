@@ -10,6 +10,7 @@
 final List<String> suportedHttpMethods = new ArrayList<String){
    "GET"
   ,"POST"
+//,"POST"     // REMOVED by simply commenting out a line. No other changes
   ,"OPTIONS"
 };
 
@@ -20,6 +21,7 @@ final List<String> suportedHttpMethods = new ArrayList<String){
 
 final StatementWithParams st = new StatementWithParams(
     CanonicalStatement.getTop("revId", "SELECT dummy FROM dual where dummy > ? and sysdate > 3"),
-    new SqlQueryParam(Types.VARCHAR, "0"),
+    // new SqlQueryParam(Types.VARCHAR, "00:00:00"),   // TEMP comment, to try different parameter type
+    new SqlQueryParam(Types.TIMESTAMP, "0"),  
     new SqlQueryParam(Types.VARCHAR, "1")
 );
