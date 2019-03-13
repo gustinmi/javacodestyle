@@ -7,12 +7,12 @@
 * No need to remove or add commas, which is goal number one
 */
 
-final List<String> suportedHttpMethods = new ArrayList<String){
+final List<String> suportedHttpMethods = new ArrayList<String>(){
    "GET"
   ,"POST"
 //,"POST"     // REMOVED by simply commenting out a line. No other changes
   ,"OPTIONS"
-};
+}; // This MUST be on separate line !!
 
 /**
 * Indentation of members of a constructor or mothod call
